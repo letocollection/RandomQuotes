@@ -1,0 +1,25 @@
+{
+  "name": "randomquotes",
+  "version": "1.0.0",
+  "description": "building random quote",
+  "main": "quotes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node quotes.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letocollection/RandomQuotes.git"
+  },
+  "author": "Leonard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/letocollection/RandomQuotes/issues"
+  },
+  "homepage": "https://github.com/letocollection/RandomQuotes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
