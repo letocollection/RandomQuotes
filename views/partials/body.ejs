@@ -1,0 +1,48 @@
+<script>
+// $("#getMessage").on("click", function() {
+//     console.log("this is getting clicked");
+//     $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+//         $("body").append(a[0].content + "<p>— " + a[0].title + "</p>")
+//     });
+// });
+
+
+
+window.onload = function() {
+
+    document.getElementById("getMessage").onclick = function() {
+        console.log("this got clicked?");
+        someFunction();
+    };
+
+    function someFunction() {
+        const url = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
+
+        fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            console.log(data);
+            console.log("this this get anything?");
+        })
+
+        document.getElementById("message").innerHTML = data;
+    }
+}
+</script>
+<div class="container-fluid">
+    <div class="row text-center">
+        <h2>Click Button For a Random Quote</h2>
+    </div>
+    <div class="row text-center">
+        <div id=message class="col-xs-12 well message">
+            The message will go here
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <button id="getMessage" class="btn btn-primary">
+                Get Message
+            </button>
+        </div>
+    </div>
+</div>
