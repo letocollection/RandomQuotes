@@ -23,9 +23,8 @@ window.onload = function() {
         .then(function(data) {
             console.log(data);
             console.log("this this get anything?");
+            document.getElementById("message").innerHTML = data;
         })
-
-        document.getElementById("message").innerHTML = data;
     }
 }
 </script>
